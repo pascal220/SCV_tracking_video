@@ -1,4 +1,4 @@
-%% Set up
+%% Setting up
 temp_bottom = load('C:\Users\Loki\OneDrive\UCL\PhD{MRes}_thesis\Matlab\cases\Case_4\2017-03-07_132008-16351247_bottom.txt');
 temp_top = load('C:\Users\Loki\OneDrive\UCL\PhD{MRes}_thesis\Matlab\cases\Case_4\2017-03-07_132008-16351247_top.txt');
 temp_bottom2 = load('C:\Users\Loki\OneDrive\UCL\PhD{MRes}_thesis\Matlab\cases\Case_4\2017-03-07_132143-16351248_bottom.txt');
@@ -20,7 +20,7 @@ x2 = x2 - mean(x2);
 x3 = x3 - mean(x3);
 x4 = x4 - mean(x4);
 
-%% PSD/FFT stuff
+%% PSD/FFT 
 % figure (1)
 % plot(t,x)
 % axis('tight')
