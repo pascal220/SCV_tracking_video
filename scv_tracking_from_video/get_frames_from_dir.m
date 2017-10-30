@@ -1,5 +1,11 @@
 function frames = get_frames_from_dir( directory, start_time, end_time)
 
+% AUTHOR
+    %   Filip Paszkiewicz
+    %
+    % DATE
+    %   21.08.2017
+
 file_name = directory;
 
 % Creat a VideoReader 
