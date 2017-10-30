@@ -1,4 +1,4 @@
-% function [] = scv_trucking_from_video(vid_name,start_time,end_time,visualise)
+ function [] = scv_trucking_from_video(vid_name,start_time,end_time,visualise)
     % Script for video tracking using SCV
     %
     % AUTHOR
