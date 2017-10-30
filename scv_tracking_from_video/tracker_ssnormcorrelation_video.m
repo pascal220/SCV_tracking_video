@@ -16,7 +16,6 @@ function [ out ] = tracker_ssnormcorrelation_video(settings,vid_obj,start_time,e
 %   centroids, and the contours.
 %
 % AUTHOR
-%   Christos Bergeles
 %   Filip Paszkiewicz    
 %
 % DATE
@@ -30,7 +29,6 @@ function [ out ] = tracker_ssnormcorrelation_video(settings,vid_obj,start_time,e
   
   vid_obj.CurrentTime = start_time;
   time = round((end_time-start_time)*vid_obj.FrameRate);
-%   images = settings.images;
 
   % Construct the scale space
   sigma = 1;
@@ -57,8 +55,7 @@ function [ out ] = tracker_ssnormcorrelation_video(settings,vid_obj,start_time,e
     i = i + 1;  
 
     waitbar_time = update_waitbar(waitbar_handle, waitbar_time, 'Tracking', i, time);
-
-%     frame = get_image_data_from_struct(images, i, settings);
+    
     frame = rgb2gray(readFrame(vid_obj));
     frame = imcrop(frame, settings.roi);
     frame = imfilter(frame, fspecial('gaussian'));
