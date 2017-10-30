@@ -2,7 +2,6 @@
     % Script for video tracking using SCV
     %
     % AUTHOR
-    %   Christos Bergeles
     %   Filip Paszkiewicz
     %
     % DATE
@@ -10,7 +9,6 @@
     %
     % example
     vid_name = '2017-03-07_123831-16187408.mp4';
-%     vid_name = '2016-12-20_121319-3997712.mpg';
     start_time = 0;
     end_time = 140;
     visualise = false;
@@ -67,75 +65,75 @@
     f_scale = (0:nfft/2)* Fs/nfft; % frequency scale
     as_far = 500;
 
-%     % Plotting fft
-%     strt = sprintf('FFT of Z. Dominant freq.: %0.3f Hz',f_scale(k_z));% dominant frequency estimat
-%     figure (1);
-%     set(gcf, 'Position', get(0,'Screensize'));
-%     plot(f_scale(1:as_far), fft_z(1:as_far),'-b+')
-%     axis('tight')
-%     grid('on')
-%     title(strt)
-%     xlabel('Frequency (Hz)')
-% 
-%     strt = sprintf('FFT of X. Dominant freq.: %0.3f Hz',f_scale(k_x));% dominant frequency estimate
-%     figure (2);
-%     set(gcf, 'Position', get(0,'Screensize'));
-%     plot(f_scale(1:as_far), fft_x(1:as_far),'-r+')
-%     axis('tight')
-%     grid('on')
-%     title(strt)
-%     xlabel('Frequency (Hz)')
-% 
-%     strt = sprintf('FFT of Y. Dominant freq.: %0.3f Hz',f_scale(k_y));% dominant frequency estimate
-%     figure (3)
-%     set(gcf, 'Position', get(0,'Screensize'));
-%     plot(f_scale(1:as_far), fft_y(1:as_far),'-g+')
-%     axis('tight')
-%     grid('on')
-%     title(strt)
-%     xlabel('Frequency (Hz)')
-% 
-%     % Plotting movment 
-%     figure (4);
-%     set(gcf, 'Position', get(0,'Screensize'));
-%     plot(t,z,'-b');
-%     axis('tight')
-%     grid('on')
-%     title('Vertical movement (z-axis)')
-%     xlabel('Time (s)')
-% 
-%     figure (5);
-%     set(gcf, 'Position', get(0,'Screensize'));
-%     plot(t,x,'-r');
-%     axis('tight')
-%     grid('on')
-%     title('Horizontal movement (x-axis)')
-%     xlabel('Time (s)')
-% 
-%     figure (6)
-%     set(gcf, 'Position', get(0,'Screensize'));
-%     plot(t,y,'-g')
-%     axis('tight')
-%     grid('on')
-%     title('Hotizontal movement (y-axis)')
-%     xlabel('Time (s)')
-% 
-%     figure (7);
-%     set(gcf, 'Position', get(0,'Screensize'));
-%     plot3(x,y,z);
-%     grid('on')
-%     title('Movement in 3D')
-%     xlabel('Horizontal movement (x-axis)')
-%     ylabel('Horizontal movement (y-axis)')
-%     zlabel('Vertical movement (z-axis)')
-%     
-%     saveas(figure(1), strcat( './sauvegarde/', vid_name , '_FFT of Z.png' ))
-%     saveas(figure(2), strcat( './sauvegarde/', vid_name , '_FFT of X.png' ))
-%     saveas(figure(3), strcat( './sauvegarde/', vid_name , '_FFT of Y.png' ))
-%     saveas(figure(4), strcat( './sauvegarde/', vid_name , '_Vertical movement (z-axis).png' ))
-%     saveas(figure(5), strcat( './sauvegarde/', vid_name , '_Horizontal movement (x-axis).png' ))
-%     saveas(figure(6), strcat( './sauvegarde/', vid_name , '_Hotizontal movement (y-axis).png' ))
-%     saveas(figure(7), strcat( './sauvegarde/', vid_name , '_Movement in 3D.png' ))
+     % Plotting fft
+     strt = sprintf('FFT of Z. Dominant freq.: %0.3f Hz',f_scale(k_z));% dominant frequency estimat
+     figure (1);
+     set(gcf, 'Position', get(0,'Screensize'));
+     plot(f_scale(1:as_far), fft_z(1:as_far),'-b+')
+     axis('tight')
+     grid('on')
+     title(strt)
+     xlabel('Frequency (Hz)')
+ 
+     strt = sprintf('FFT of X. Dominant freq.: %0.3f Hz',f_scale(k_x));% dominant frequency estimate
+     figure (2);
+     set(gcf, 'Position', get(0,'Screensize'));
+     plot(f_scale(1:as_far), fft_x(1:as_far),'-r+')
+     axis('tight')
+     grid('on')
+     title(strt)
+     xlabel('Frequency (Hz)')
+ 
+     strt = sprintf('FFT of Y. Dominant freq.: %0.3f Hz',f_scale(k_y));% dominant frequency estimate
+     figure (3)
+     set(gcf, 'Position', get(0,'Screensize'));
+     plot(f_scale(1:as_far), fft_y(1:as_far),'-g+')
+     axis('tight')
+     grid('on')
+     title(strt)
+     xlabel('Frequency (Hz)')
+ 
+     % Plotting movment 
+     figure (4);
+     set(gcf, 'Position', get(0,'Screensize'));
+     plot(t,z,'-b');
+     axis('tight')
+     grid('on')
+     title('Vertical movement (z-axis)')
+     xlabel('Time (s)')
+ 
+     figure (5);
+     set(gcf, 'Position', get(0,'Screensize'));
+     plot(t,x,'-r');
+     axis('tight')
+     grid('on')
+     title('Horizontal movement (x-axis)')
+     xlabel('Time (s)')
+ 
+     figure (6)
+     set(gcf, 'Position', get(0,'Screensize'));
+     plot(t,y,'-g')
+     axis('tight')
+     grid('on')
+     title('Hotizontal movement (y-axis)')
+     xlabel('Time (s)')
+ 
+     figure (7);
+     set(gcf, 'Position', get(0,'Screensize'));
+     plot3(x,y,z);
+     grid('on')
+     title('Movement in 3D')
+     xlabel('Horizontal movement (x-axis)')
+     ylabel('Horizontal movement (y-axis)')
+     zlabel('Vertical movement (z-axis)')
+     
+     saveas(figure(1), strcat( './sauvegarde/', vid_name , '_FFT of Z.png' ))
+     saveas(figure(2), strcat( './sauvegarde/', vid_name , '_FFT of X.png' ))
+     saveas(figure(3), strcat( './sauvegarde/', vid_name , '_FFT of Y.png' ))
+     saveas(figure(4), strcat( './sauvegarde/', vid_name , '_Vertical movement (z-axis).png' ))
+     saveas(figure(5), strcat( './sauvegarde/', vid_name , '_Horizontal movement (x-axis).png' ))
+     saveas(figure(6), strcat( './sauvegarde/', vid_name , '_Hotizontal movement (y-axis).png' ))
+     saveas(figure(7), strcat( './sauvegarde/', vid_name , '_Movement in 3D.png' ))
 
     fprintf('ANALYSING DONE!!!\n')
     
